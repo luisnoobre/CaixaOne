@@ -1,6 +1,5 @@
 package com.caixaone.caixaone.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,7 +33,6 @@ public class Venda {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
-    @JsonManagedReference
     @OneToMany(mappedBy = "venda", cascade = CascadeType.ALL)
     private List<ItemVenda> itens;
 }
