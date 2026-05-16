@@ -43,6 +43,7 @@ public class ProdutoService {
         existente.setPrecoVenda(produto.getPrecoVenda());
         existente.setEstoque(produto.getEstoque());
         existente.setEstoqueMinimo(produto.getEstoqueMinimo());
+        existente.setDesconto(produto.getDesconto());
         existente.setCategoria(produto.getCategoria());
         return produtoRepository.save(existente);
     }

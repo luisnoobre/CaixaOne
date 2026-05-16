@@ -36,6 +36,9 @@ public class Produto {
     @Column(name = "estoque_minimo")
     private Integer estoqueMinimo;
 
+    @Column(name = "desconto")
+    private Double desconto;
+
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
